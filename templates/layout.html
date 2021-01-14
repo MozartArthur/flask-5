@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="../static/css/master.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="is-full has-text-centered">{% include 'header.html' %} {% block header %}{% endblock %}</div>
+    <div>
+      <div class="columns is-multiline">
+        <div class="column is-three-quarters m-5">
+          <div class="columns is-multiline">
+            <div class="column is-full">{% include 'specialities.html' %} {% block specialities %}{% endblock %}</div>
+            <div class="column is-full">{% include 'tutors.html' %} {% block tutors %}{% endblock %}</div>
+            <div class="column is-full">{% include 'form.html' %} {% block form %}{% endblock %}</div>
+
+      <div class="column is-full has-text-centered">
+      </div>
+    </div>
+  </body>
+</html>

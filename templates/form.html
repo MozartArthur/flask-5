@@ -1,0 +1,38 @@
+{% block form %}
+<div class="is-size-3 has-text-centered">
+  <p>Регистрация</p>
+</div>
+<form method="POST" action="/">
+  {{ form.csrf_token }}
+  {% for cat, mes in get_flashed_messages(True) %}
+    <div class="flash {{ cat }}">{{ mes }}</div>
+  {% endfor %}
+  <div class="field">
+    <label class="label">Имя</label>
+    <div class="control">
+      <input class="input" name="name" type="text" placeholder="e.g Alex">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Фамилия</label>
+    <div class="control">
+      <input class="input" name="surname" type="text" placeholder="e.g Smith">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control">
+      <input class="input" name="email" type="email" placeholder="e.g. alexsmith@gmail.com">
+    </div>
+    </div>
+    <div class="field">
+    <p class="control">
+      <button class="button is-success">
+        Регистрация
+      </button>
+    </p>
+  </div>
+</form>
+{% endblock %}
